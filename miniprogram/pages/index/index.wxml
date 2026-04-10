@@ -1,0 +1,4 @@
+<!-- index.wxml -->
+<navigation-bar title="首页" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+<!-- <view class="page">{{motto}}</view> -->
+<button type="primary" bindtap="showModal">作废线索</button>
