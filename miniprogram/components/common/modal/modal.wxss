@@ -70,8 +70,8 @@
 .common-modal__title {
   font-size: 36rpx;
   line-height: 1.35;
-  color: #111827;
-  font-weight: 600;
+  color: #FB2C35;
+  font-weight: bold;
 }
 
 .common-modal__body {
@@ -105,9 +105,9 @@
 }
 
 .common-modal__btn {
-  min-width: 156rpx;
+  /* min-width: 156rpx; */
   height: 72rpx;
-  padding: 0 28rpx;
+  /* padding: 0 28rpx; */
   border-radius: 999rpx;
   display: flex;
   align-items: center;
@@ -123,11 +123,13 @@
 
 .common-modal__btn--cancel {
   background: #ffffff;
+  min-width: 100rpx;
 }
 
 .common-modal__btn--confirm {
   background: #f43f5e;
   color: #fff;
+  min-width: 200rpx;
 }
 
 .common-modal__loading-dot {
