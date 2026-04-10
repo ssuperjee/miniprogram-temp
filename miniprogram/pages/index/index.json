@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "navigation-bar": "/components/navigation-bar/navigation-bar",
-    "confirm-modal": "/components/common/modal/modal"
+    "confirm-modal": "/components/common/modal/modal",
+    "van-button": "@vant/weapp/button/index",
+    "van-dialog": "@vant/weapp/dialog/index"
   }
 }

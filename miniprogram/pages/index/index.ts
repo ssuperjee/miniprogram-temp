@@ -1,3 +1,5 @@
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
+
 Page({
   /**
    * 页面初始数据
@@ -6,6 +8,19 @@ Page({
     modalShow: false, // 弹窗显示状态
     inputValue: '',   // 输入框内容
     modalSubmitting: false
+  },
+
+  onLoad() {
+    Dialog.confirm({
+      title: '标题',
+      message: '弹窗内容',
+    })
+      .then(() => {
+        // on confirm
+      })
+      .catch(() => {
+        // on cancel
+      });
   },
 
   /**
