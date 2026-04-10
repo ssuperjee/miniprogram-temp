@@ -1,4 +1,15 @@
 <!-- index.wxml -->
 <navigation-bar title="首页" back="{{true}}" color="black" background="#FFF"></navigation-bar>
-<!-- <view class="page">{{motto}}</view> -->
 <button type="primary" bindtap="showModal">作废线索</button>
+
+<confirm-modal
+  show="{{modalShow}}"
+  title="作废线索"
+  desc="编号：XS20260326002"
+  value="{{inputValue}}"
+  beforeClose="{{true}}"
+  confirmLoading="{{modalSubmitting}}"
+  bind:change="handleModalInput"
+  bind:close="handleModalClose"
+  bind:beforeclose="handleModalBeforeClose"
+/>

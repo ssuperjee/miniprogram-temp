@@ -1,0 +1,62 @@
+<view wx:if="{{visible}}" class="common-modal">
+  <view
+    class="common-modal__mask {{active ? '' : 'common-modal__mask--enter'}}"
+    style="transition-duration: 260ms;"
+    bindtap="onMaskTap"
+  ></view>
+  <view class="common-modal__panel-wrap" style="transform: translate3d(0, -{{panelShift}}px, 0);" catchtap="noop">
+    <view
+      class="common-modal__panel {{active ? '' : 'common-modal__panel--enter'}}"
+      style="transition-duration: 260ms;"
+    >
+    <view wx:if="{{title}}" class="common-modal__header">
+      <slot name="title-icon"></slot>
+      <image
+        wx:if="{{titleIcon}}"
+        class="common-modal__title-icon"
+        src="{{titleIcon}}"
+        mode="aspectFit"
+        style="width: {{titleIconSize}}rpx; height: {{titleIconSize}}rpx;"
+      ></image>
+      <text class="common-modal__title">{{title}}</text>
+    </view>
+
+    <view class="common-modal__body">
+      <text wx:if="{{desc}}" class="common-modal__description">{{desc}}</text>
+      <textarea
+        class="common-modal__textarea"
+        value="{{innerValue}}"
+        style="max-height: {{textareaMaxHeight}}rpx;"
+        placeholder="{{placeholder}}"
+        maxlength="{{maxlength}}"
+        auto-height="{{autoHeight}}"
+        adjust-position="{{true}}"
+        cursor-spacing="20"
+        focus="{{focus}}"
+        bindinput="onTextareaInput"
+        bindblur="onTextareaBlur"
+        bindkeyboardheightchange="onKeyboardHeightChange"
+      ></textarea>
+    </view>
+
+    <view class="common-modal__footer">
+      <view
+        wx:if="{{showCancel}}"
+        class="common-modal__btn common-modal__btn--cancel"
+        bindtap="onCancel"
+        hover-class="common-modal__btn--hover"
+      >
+        {{cancelText}}
+      </view>
+      <view
+        class="common-modal__btn common-modal__btn--confirm {{(confirmDisabled || confirmLoading) ? 'common-modal__btn--disabled' : ''}}"
+        bindtap="onConfirm"
+        hover-class="common-modal__btn--hover"
+      >
+        <view wx:if="{{confirmLoading}}" class="common-modal__loading-dot"></view>
+        <text>{{confirmLoading ? '处理中...' : confirmText}}</text>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>
