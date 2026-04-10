@@ -1,2 +1,6 @@
 <!-- index.wxml -->
 <navigation-bar title="首页" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+
+<van-button type="primary" bind:tap="showModal">主要按钮</van-button>
+
+<van-dialog id="van-dialog" />
