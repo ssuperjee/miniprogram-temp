@@ -1,0 +1,5 @@
+<view class="page">
+  <navigation-bar title="线索提报工具" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+
+  <view>线索提报工具</view>
+</view>

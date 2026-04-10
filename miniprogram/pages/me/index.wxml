@@ -1,0 +1,5 @@
+<view class="page">
+  <navigation-bar title="个人中心" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+
+  <view>个人中心</view>
+</view>
