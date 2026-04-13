@@ -1,1 +1,4 @@
-/* pages/home/index.wxss */
+.page {
+  min-height: 100vh;
+  background: #000;
+}

@@ -3,7 +3,8 @@
     "pages/login/index",
     "pages/home/index",
     "pages/list/index",
-    "pages/me/index"
+    "pages/me/index",
+    "components/common/chart/chart"
   ],
   "tabBar": {
     "color": "#cdcdcd",
@@ -35,7 +36,7 @@
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
-  "renderer": "skyline",
+  "renderer": "webview",
   "rendererOptions": {
     "skyline": {
       "defaultDisplayBlock": true,
