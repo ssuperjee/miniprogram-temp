@@ -16,7 +16,7 @@
               aria-role="button"
               aria-label="返回"
             >
-              <view class="weui-navigation-bar__button weui-navigation-bar__btn_goback"></view>
+              <view class="weui-navigation-bar__button weui-navigation-bar__btn_goback" style="background-color: {{color}};"></view>
             </view>
           </view>
         </block>

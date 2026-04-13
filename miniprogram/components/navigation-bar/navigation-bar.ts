@@ -10,6 +10,11 @@ Component({
       type: String,
       value: ''
     },
+    mode: {
+      type: String,
+      value: 'stacked',
+      observer: '_modeChange'
+    },
     title: {
       type: String,
       value: ''
@@ -55,7 +60,9 @@ Component({
    * 组件的初始数据
    */
   data: {
-    displayStyle: ''
+    displayStyle: '',
+    isOverlay: false,
+    navBarHeightStyle: ''
   },
   lifetimes: {
     attached() {
@@ -64,20 +71,30 @@ Component({
         success: (res) => {
           const isAndroid = res.platform === 'android'
           const isDevtools = res.platform === 'devtools'
+          const safeAreaTop = res.safeArea?.top ?? res.statusBarHeight ?? 0
+          const navBarHeightStyle = isDevtools || isAndroid
+            ? `height: calc(var(--height) + ${safeAreaTop}px); padding-top: ${safeAreaTop}px`
+            : 'height: calc(var(--height) + env(safe-area-inset-top)); padding-top: env(safe-area-inset-top)'
           this.setData({
             ios: !isAndroid,
             innerPaddingRight: `padding-right: ${res.windowWidth - rect.left}px`,
             leftWidth: `width: ${res.windowWidth - rect.left }px`,
-            safeAreaTop: isDevtools || isAndroid ? `height: calc(var(--height) + ${res.safeArea.top}px); padding-top: ${res.safeArea.top}px` : ``
+            navBarHeightStyle
           })
         }
       })
+      this._modeChange(this.properties.mode)
     },
   },
   /**
    * 组件的方法列表
    */
   methods: {
+    _modeChange(mode: string) {
+      this.setData({
+        isOverlay: mode === 'overlay'
+      })
+    },
     _showChange(show: boolean) {
       const animated = this.data.animated
       let displayStyle = ''
