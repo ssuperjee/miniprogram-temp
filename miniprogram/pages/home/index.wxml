@@ -1,5 +1,7 @@
 <view class="page">
-  <navigation-bar title="线索提报工具" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+  <navigation-bar title="线索提报工具" back="{{false}}" mode="overlay" color="white" background="#9f1624"></navigation-bar>
 
-  <view>线索提报工具</view>
+  <view style="padding-top: 30rpx;">
+    <image style="width:100%;height:560rpx" src="/assets/img/1.png" mode="widthFix" />
+  </view>
 </view>
