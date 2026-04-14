@@ -2,32 +2,45 @@
 <navigation-bar title="首页" show="{{false}}" back="{{true}}" color="black" background="#FFF"></navigation-bar>
 <van-dialog id="van-dialog" />
 
-<view>
-
-</view>
-
-<view>
-  <view class="form-item">
-    <view class="label">手机号 <text style="color:red">*</text></view>
-    <van-field custom-class="ipt" value="{{ acount }}" placeholder="请输入手机号">
-      <!-- icon插槽 -->
-      <view slot="left-icon" style="margin-right:25rpx">
-        <van-icon name="phone-o" />
-      </view>
-    </van-field>
-    <view class="extra-text">仅支持预注册手机号注册</view>
+<view class="login">
+  <!-- 标题内容 -->
+  <view class="header">
+    <bg-box width="120" height="120" bgColor="blue"></bg-box>
+    <view class="font40 title">产品种植侵权线索</view>
+    <view>提报管理系统</view>
   </view>
 
-  <view class="form-item">
-    <view class="label">验证码 <text style="color:red">*</text></view>
-    <view class="code-box">
-      <van-field custom-class="ipt code" value="{{ acount }}" placeholder="请输入6位验证码">
+  <!-- 表单内容 -->
+  <view class="form">
+    <view class="form-item">
+      <view class="label">
+        手机号
+        <text style="color:red">*</text>
+      </view>
+      <van-field custom-class="ipt" value="{{ form.acount }}" placeholder="请输入手机号">
         <!-- icon插槽 -->
         <view slot="left-icon" style="margin-right:25rpx">
-          <van-icon name="video-o" />
+          <van-icon name="phone-o" />
         </view>
       </van-field>
-      <button class="extra-btn">获取验证码</button>
+      <view class="extra-text">仅支持预注册手机号注册</view>
     </view>
+    <view class="form-item">
+      <view class="label">
+        验证码
+        <text style="color:red">*</text>
+      </view>
+      <view class="code-box">
+        <van-field custom-class="ipt code" value="{{ form.code }}" placeholder="请输入6位验证码">
+          <!-- icon插槽 -->
+          <view slot="left-icon" style="margin-right:25rpx">
+            <van-icon name="video-o" />
+          </view>
+        </van-field>
+        <button class="extra-btn">获取验证码</button>
+      </view>
+    </view>
+
+    <button class="submit">登录</button>
   </view>
 </view>

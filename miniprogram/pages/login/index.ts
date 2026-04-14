@@ -5,7 +5,7 @@ Page({
     // 页面数据
     form:{
       acount: '',
-      pwd: ''
+      code: ''
     }
   },
   onChange(event: any) {
