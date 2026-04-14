@@ -3,4 +3,52 @@ page {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-item {
+  width: 500rpx;
+  margin: 50rpx auto;
+}
+
+.ipt {
+  border: 1rpx solid #ddd;
+  border-radius: 15rpx;
+  height: 80rpx;
+}
+
+.extra-text{
+  font-size: 22rpx;
+  color: #999;
+  margin-top: 15rpx;
+}
+
+.extra-btn{
+  font-size: 22rpx;
+  color: #999;
+  /* margin-left: 25rpx; */
+  margin: 0;
+  border-radius: 25rpx !important;
+  outline: none;
+  border: none;
+  background: #999 !important;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.code {
+  width: 300rpx !important;
+}
+
+.code-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  margin-bottom: 20rpx;
 }

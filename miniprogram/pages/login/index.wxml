@@ -1,6 +1,33 @@
 <!-- index.wxml -->
-<navigation-bar title="首页" back="{{true}}" color="black" background="#FFF"></navigation-bar>
-
-<van-button type="primary" bind:tap="showModal">主要按钮</van-button>
-
+<navigation-bar title="首页" show="{{false}}" back="{{true}}" color="black" background="#FFF"></navigation-bar>
 <van-dialog id="van-dialog" />
+
+<view>
+
+</view>
+
+<view>
+  <view class="form-item">
+    <view class="label">手机号 <text style="color:red">*</text></view>
+    <van-field custom-class="ipt" value="{{ acount }}" placeholder="请输入手机号">
+      <!-- icon插槽 -->
+      <view slot="left-icon" style="margin-right:25rpx">
+        <van-icon name="phone-o" />
+      </view>
+    </van-field>
+    <view class="extra-text">仅支持预注册手机号注册</view>
+  </view>
+
+  <view class="form-item">
+    <view class="label">验证码 <text style="color:red">*</text></view>
+    <view class="code-box">
+      <van-field custom-class="ipt code" value="{{ acount }}" placeholder="请输入6位验证码">
+        <!-- icon插槽 -->
+        <view slot="left-icon" style="margin-right:25rpx">
+          <van-icon name="video-o" />
+        </view>
+      </van-field>
+      <button class="extra-btn">获取验证码</button>
+    </view>
+  </view>
+</view>

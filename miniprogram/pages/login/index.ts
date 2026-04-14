@@ -3,8 +3,15 @@ import Dialog from "../../miniprogram_npm/@vant/weapp/dialog/dialog";
 Page({
   data: {
     // 页面数据
+    form:{
+      acount: '',
+      pwd: ''
+    }
   },
-
+  onChange(event: any) {
+    // event.detail 为当前输入的值
+    console.log(event.detail);
+  },
   onLoad() {
     // 页面加载时的逻辑
     const h = wx.utils.common.calculateNavBarHeight();
