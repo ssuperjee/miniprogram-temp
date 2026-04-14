@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "navigation-bar": "/components/navigation-bar/navigation-bar",
-    "common-chart": "/components/common/chart/chart"
+    "common-chart": "/components/common/chart/chart",
+    "privacy-dialog": "/components/privacy-dialog/privacy-dialog"
   },
   "disableScroll": true
 }

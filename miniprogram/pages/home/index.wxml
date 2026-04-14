@@ -1,7 +1,9 @@
 <view class="page">
   <navigation-bar title="线索提报工具" back="{{true}}" mode="stacked" color="black" background="transparent"></navigation-bar>
 
-  <common-chart subtitle="{{gaugeValue}}%" title="办结率" value="{{gaugeValue}}"></common-chart>
+  <!-- <common-chart subtitle="{{gaugeValue}}%" title="办结率" value="{{gaugeValue}}"></common-chart> -->
 
-  <button bind:tap="onButtonTap">点击更新办结率</button>
 </view>
+
+
+<privacy-dialog />
